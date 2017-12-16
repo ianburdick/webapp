@@ -2,7 +2,7 @@
 
 # Replace the following URL with a public GitHub repo URL
 # gitrepo=https://github.com/Azure-Samples/php-docs-hello-world
-gitrepo=https://github.com/ianburdick/test
+gitrepo=https://github.com/ianburdick/webapp
 webappname=rattroundandround
 
 # Create a resource group.
@@ -13,6 +13,8 @@ az appservice plan create --name $webappname --resource-group myResourceGroup --
 
 # Create a web app.
 az webapp create --name $webappname --resource-group myResourceGroup --plan $webappname
+
+sleep 20
 
 # Deploy code from a public GitHub repository. 
 az webapp deployment source config --name $webappname --resource-group myResourceGroup \
